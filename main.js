@@ -14,3 +14,27 @@ function productData() {
     
     }; productData();
     //created a function to fetch data, catch error and display message 
+
+    // create the function to display product data 
+    function displayData(products) {
+        const productPlace = document.getElementById("product-data")
+        let productInHTML = ``;
+        products.forEach((product) => {
+            const {
+                company, 
+                price, 
+                name, 
+                image
+            } = product.fields ; //separates product data in fields 
+        
+             productInHTML += 
+            `<section class="product">
+            <img src="${image[0].url}" />
+            <h3>${name}</h3>
+            <p>Company: ${company}</p>
+            <p>Price: $${(price / 100)}</p>
+        </section>`;
+        }); // this will update dynamically in the html file 
+        
+        productPlace.innerHTML = productInHTML ; 
+        }; 
