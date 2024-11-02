@@ -5,7 +5,7 @@ function productData() {
         return Response.json()
     }).then((data) => { //then consumes the promise 
         displayData(data) //will pass through function to display data after fetch complete
-    }).catch((error) =>
+    }).catch((error) => //this catches the errors
     {
         alert(error) //this catches errors in case they happen and sends out alert
     }
