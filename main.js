@@ -1,4 +1,4 @@
-// function to fetch data
+// function to fetch data using promises 
 function productData() {
     const request = fetch("https://www.course-api.com/javascript-store-products").then((Response) =>
     { console.log(Response)
